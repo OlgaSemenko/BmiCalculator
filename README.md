@@ -1,4 +1,4 @@
 # BmiCalculator
 Test project
 BMI calculator
-version 0.1
+version 0.3
