@@ -133,7 +133,7 @@ public class ButtonFunktion {
 
 		// getItems returns the ObservableList object which you can add items to
 		choiceBox.getItems().add("Muž");
-		choiceBox.getItems().add("žena");
+		choiceBox.getItems().add("Žena");
 		choiceBox.getItems().add("");
 
 		// Set a default value
@@ -151,8 +151,8 @@ public class ButtonFunktion {
 	}
 
 	private String calculateBmi() {
-		if (gender.equals("žena")) {
-			return "Počítáme pro ženu";
+		if (gender.equals("Žena")) {
+			return "Počítáme pro Ženu";
 		}
 		if (gender.equals("Muž")) {
 			return "Počítáme pro Muže";
