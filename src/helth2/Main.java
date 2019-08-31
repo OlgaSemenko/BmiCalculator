@@ -26,20 +26,20 @@
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			window = primaryStage;
-			window.setTitle("Výpoèet kalorií");
+			window.setTitle("VÃ½poÄet kaloriÃ­");
 
 			GridPane grid = new GridPane();
 			grid.setPadding(new Insets(10, 10, 10, 10));
 			grid.setVgap(8);
 			grid.setHgap(10);
 
-			button1 = new Button("Jednoduchý výpoèet");
+			button1 = new Button("JednoduchÃ½ vÃ½poÄet");
 			GridPane.setConstraints(button1, 1, 1);
 			button1.setOnAction(e -> {
 				ButtonFunktion.simpleButton();
 			});
 			
-			button2 = new Button("Podrobný výpoèet");
+			button2 = new Button("PodrobnÃ½ vÃ½poÄet");
 			GridPane.setConstraints(button2, 1, 2);
 			button2.setOnAction(e -> {
 				ButtonFunktion.involvedButton();

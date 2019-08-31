@@ -26,7 +26,7 @@ public class CalculateFunktion {
 	public static void simpleCalculation(String title, String message) {
 
 		Stage window = new Stage();
-		window.setTitle("Vıpoèet kalorií");
+		window.setTitle("VÃ½poÄet kaloriÃ­");
 
 		GridPane grid = new GridPane();
 		grid.setPadding(new Insets(10, 10, 10, 10));

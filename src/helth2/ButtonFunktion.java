@@ -40,7 +40,7 @@ public class ButtonFunktion {
 		grid.setVgap(8);
 		grid.setHgap(10);
 
-		Label weightLabel = new Label("Váha:");
+		Label weightLabel = new Label("VÃ¡ha:");
 		GridPane.setConstraints(weightLabel, 0, 1);
 
 		weightInput = new TextField("vaha");
@@ -49,7 +49,7 @@ public class ButtonFunktion {
 			weight = Float.parseFloat(newValue);
 		});
 
-		Label highLabel = new Label("Vıška:");
+		Label highLabel = new Label("VÃ½Å¡ka:");
 		GridPane.setConstraints(highLabel, 0, 2);
 
 		highInput = new TextField("vyska");
@@ -58,10 +58,10 @@ public class ButtonFunktion {
 			high = Float.parseFloat(newValue);
 		});
 
-		button = new Button("Vypoèti");
+		button = new Button("VypoÄti");
 		GridPane.setConstraints(button, 1, 4);
 		button.setOnAction(e -> {
-			CalculateFunktion.simpleCalculation("Vısledek BMI", "Vaše BMI je: " + CalculateFunktion.vysledek);
+			CalculateFunktion.simpleCalculation("VÃ½sledek BMI", "VaÅ¡e BMI je: " + CalculateFunktion.vysledek);
 		});
 
 		grid.getChildren().addAll(weightLabel, weightInput, highLabel, highInput, button);
@@ -90,10 +90,10 @@ public class ButtonFunktion {
 		grid.setVgap(8);
 		grid.setHgap(10);
 
-		Label ageLabel = new Label("Vìk:");
+		Label ageLabel = new Label("VÄ›k:");
 		GridPane.setConstraints(ageLabel, 0, 0);
 
-		ageInput = new TextField("vìk");
+		ageInput = new TextField("vÄ›k");
 		GridPane.setConstraints(ageInput, 1, 0);
 		ageInput.textProperty().addListener((observable, oldValue, newValue) -> {
 			if (isFloat(newValue)) {
@@ -101,7 +101,7 @@ public class ButtonFunktion {
 			}
 		});
 
-		Label weightLabel = new Label("Váha:");
+		Label weightLabel = new Label("VÃ¡ha:");
 		GridPane.setConstraints(weightLabel, 0, 1);
 
 		weightInput = new TextField("vaha");
@@ -110,7 +110,7 @@ public class ButtonFunktion {
 			weight = Float.parseFloat(newValue);
 		});
 
-		Label highLabel = new Label("Vıška:");
+		Label highLabel = new Label("VÃ½Å¡ka:");
 		GridPane.setConstraints(highLabel, 0, 2);
 
 		highInput = new TextField("vyska");
@@ -119,21 +119,21 @@ public class ButtonFunktion {
 			high = Float.parseFloat(newValue);
 		});
 
-		button = new Button("Vypoèti");
+		button = new Button("VypoÄti");
 		GridPane.setConstraints(button, 1, 4);
 		button.setOnAction(e -> {
 			ButtonFunktion.simpleButton();
 		});
 
-		Label GenderLabel = new Label("Pohlaví:");
+		Label GenderLabel = new Label("PohlavÃ­:");
 		GridPane.setConstraints(highLabel, 0, 2);
 
 		ChoiceBox<String> choiceBox = new ChoiceBox<>();
 		GridPane.setConstraints(choiceBox, 0, 3);
 
 		// getItems returns the ObservableList object which you can add items to
-		choiceBox.getItems().add("Mu");
-		choiceBox.getItems().add("ena");
+		choiceBox.getItems().add("MuÅ¾");
+		choiceBox.getItems().add("Å¾ena");
 		choiceBox.getItems().add("");
 
 		// Set a default value
@@ -151,19 +151,19 @@ public class ButtonFunktion {
 	}
 
 	private String calculateBmi() {
-		if (gender.equals("ena")) {
-			return "Poèítáme pro enu";
+		if (gender.equals("Å¾ena")) {
+			return "PoÄÃ­tÃ¡me pro Å¾enu";
 		}
-		if (gender.equals("Mu")) {
-			return "Poèítáme pro Mue";
+		if (gender.equals("MuÅ¾")) {
+			return "PoÄÃ­tÃ¡me pro MuÅ¾e";
 		}
-//		tìlesná hmotnost v kg / tìlesná vıška v metrech na druhou.
+//		tÄ›lesnÃ¡ hmotnost v kg / tÄ›lesnÃ¡ vÃ½Å¡ka v metrech na druhou.
 		return Double.toString(weight / Math.pow(high, 2));
 	}
 
 	private static boolean isFloat(String newValue) {
-// 		zkontorlovat jestli je to float, zkontrolovat 3 hodnoty-musí bıt rozdílné od 0
-// 		pokud ano nastavit buttonu-enabled true a vrátit tu hodnotu
+// 		zkontorlovat jestli je to float, zkontrolovat 3 hodnoty-musÃ­ bÃ½t rozdÃ­lnÃ½ od 0
+// 		pokud ano nastavit buttonu-enabled true a vrÃ¡tit tu hodnotu
 		return false;
 	}
 
